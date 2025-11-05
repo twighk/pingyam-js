@@ -10,14 +10,14 @@
     <script src="js/data.js" type="text/javascript"></script>
     <script src="js/strings.js" type="text/javascript"></script>
   </head>
-  <body onload="window.converttext.focus();">
+  <body onload="window.converttext.focus(); translate_string(document.getElementById('lang_selector').value);">
     <header>
       <a class="tr-string" data-tr="src" href="https://github.com/dohliam/pingyam-js">原始碼</a> · 
       <select name="lang_selector" id="lang_selector" accesskey="l" onchange="translate_string(this.value)">
-        <option class="tr-string" data-tr="lang" value="" disabled="" SELECTED>Language</option>
+        <option class="tr-string" data-tr="lang" value="" disabled="">Language</option>
         <option value="zht">中文（繁體）</option>
         <option value="zhs">中文（简体）</option>
-        <option value="en">English</option>
+        <option value="en" SELECTED>English</option>
       </select>
     </header>
     <h1 class="tr-string" data-tr="title">粵語拼音轉換</h1>
