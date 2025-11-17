@@ -44,7 +44,12 @@
     </header>
     <h1 class="tr-string" data-tr="title">粵語拼音轉換</h1>
     <div id="converter">
-      <textarea class="tr-string" data-tr="input" id="converttext" rows=10 cols=40 placeholder="輸入粵語拼音" accesskey="i" oninput="yuepinzh()"></textarea><br>
+      <textarea class="tr-string" data-tr="input" id="converttext" rows="10" cols="40" placeholder="輸入粵語拼音" accesskey="i"
+        oninput="yuepinzh()"
+        onchange="yuepinzh()"
+        onpaste="setTimeout(yuepinzh,0)"
+        oncut="setTimeout(yuepinzh,0)"
+        ondrop="setTimeout(yuepinzh,0)"></textarea><br>
       <span class="tr-string" data-tr="orig">原文：</span>
       <select id="frompin" onchange="yuepinzh()" accesskey="f">
         <option class="tr-string" data-tr="py0" value="0">耶魯拼音（數字）</option>
@@ -78,7 +83,7 @@
 
       <div id="rcontainer" style="display:none">
         <div id="rheader"><h3 class="tr-string" data-tr="result">結果：</h3></div>
-        <textarea id="results" placeholder="" accesskey="o"></div>
+        <textarea id="results" placeholder="" accesskey="o" rows="10" cols="40"></div>
       </div>
     </div>
   </body>
